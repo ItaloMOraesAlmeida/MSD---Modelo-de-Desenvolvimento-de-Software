@@ -5,13 +5,13 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: "0.0.0.0", // Permite acesso externo (Docker)
+    host: "0.0.0.0",
     port: 5175,
     watch: {
-      usePolling: true, // Necessário para hot reload no Docker
+      usePolling: true,
     },
     hmr: {
-      host: "localhost", // Hot Module Replacement
+      host: "localhost",
     },
   },
 });
