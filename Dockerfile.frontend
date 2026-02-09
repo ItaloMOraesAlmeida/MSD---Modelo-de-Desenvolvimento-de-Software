@@ -14,11 +14,11 @@ RUN npm install
 COPY front-end/ ./
 
 # Expor porta do Vite
-EXPOSE 5173
+EXPOSE 5175
 
 # Variáveis de ambiente para Vite aceitar conexões externas
 ENV HOST=0.0.0.0
-ENV PORT=5173
+ENV PORT=5175
 
 # Comando para iniciar em modo desenvolvimento
 CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
