@@ -59,5 +59,5 @@ README.md
 *.md
 LICENSE
 
-# Front-end (não necessário no build do back-end)
-front-end/
+# Front-end (comentado para permitir build do frontend)
+# front-end/
