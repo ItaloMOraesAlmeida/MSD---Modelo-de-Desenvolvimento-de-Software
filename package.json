@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sonar:back": "dotenv -- cross-var sonar -Dsonar.host.url=$SONAR_HOST -Dsonar.token=$SONAR_TOKEN_BACK -Dsonar.projectKey=$SONAR_PROJECT_KEY_BACK -Dsonar.projectName=\"$SONAR_PROJECT_NAME_BACK\" -Dsonar.sources=back-end -Dsonar.exclusions=**/node_modules/**",
+    "sonar:back": "dotenv -- cross-var sonar -Dsonar.host.url=$SONAR_HOST -Dsonar.token=$SONAR_TOKEN_BACK -Dsonar.projectKey=$SONAR_PROJECT_KEY_BACK -Dsonar.projectName=\"$SONAR_PROJECT_NAME_BACK\" -Dsonar.sources=back-end -Dsonar.tests=back-end -Dsonar.test.inclusions=\"back-end/**/*.spec.ts\" -Dsonar.javascript.lcov.reportPaths=back-end/coverage/lcov.info -Dsonar.exclusions=**/node_modules/**,back-end/dist/**,back-end/coverage/**",
     "sonar:front": "dotenv -- cross-var sonar -Dsonar.host.url=$SONAR_HOST -Dsonar.token=$SONAR_TOKEN_FRONT -Dsonar.projectKey=$SONAR_PROJECT_KEY_FRONT -Dsonar.projectName=\"$SONAR_PROJECT_NAME_FRONT\" -Dsonar.sources=front-end -Dsonar.exclusions=**/node_modules/**",
     "sonar": "npm run sonar:back && npm run sonar:front"
   },

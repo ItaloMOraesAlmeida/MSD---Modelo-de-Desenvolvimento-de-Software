@@ -135,4 +135,9 @@ Todos os dados são validados usando Zod:
   console.log(`\n🚀 Servidor rodando na porta ${port}`);
   console.log(`📚 Documentação Swagger: http://localhost:${port}/api/docs\n`);
 }
-void bootstrap();
+
+if (process.env.NODE_ENV !== 'test') {
+  void bootstrap(); // nosonar
+}
+
+export { bootstrap };
