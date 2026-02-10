@@ -5,7 +5,7 @@ import { PrismaService } from '../services/prisma.service';
 @ApiTags('Health Check')
 @Controller('health')
 export class HealthController {
-  constructor(private prisma: PrismaService) {}
+  constructor(private readonly prisma: PrismaService) {}
 
   @Get()
   @ApiOperation({ summary: 'Verificar saúde da aplicação' })

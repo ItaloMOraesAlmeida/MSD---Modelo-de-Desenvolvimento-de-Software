@@ -13,8 +13,8 @@ import {
 @Controller('auth')
 export class AuthController {
   constructor(
-    private registerUserUseCase: RegisterUserUseCase,
-    private loginUserUseCase: LoginUserUseCase,
+    private readonly registerUserUseCase: RegisterUserUseCase,
+    private readonly loginUserUseCase: LoginUserUseCase,
   ) {}
 
   @Post('register')

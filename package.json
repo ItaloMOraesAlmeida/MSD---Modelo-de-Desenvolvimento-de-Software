@@ -1,0 +1,22 @@
+{
+  "name": "mds",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "back-end",
+    "front-end"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sonar:back": "dotenv -- cross-var sonar -Dsonar.host.url=$SONAR_HOST -Dsonar.token=$SONAR_TOKEN_BACK -Dsonar.projectKey=$SONAR_PROJECT_KEY_BACK -Dsonar.projectName=\"$SONAR_PROJECT_NAME_BACK\" -Dsonar.sources=back-end -Dsonar.exclusions=**/node_modules/**",
+    "sonar:front": "dotenv -- cross-var sonar -Dsonar.host.url=$SONAR_HOST -Dsonar.token=$SONAR_TOKEN_FRONT -Dsonar.projectKey=$SONAR_PROJECT_KEY_FRONT -Dsonar.projectName=\"$SONAR_PROJECT_NAME_FRONT\" -Dsonar.sources=front-end -Dsonar.exclusions=**/node_modules/**",
+    "sonar": "npm run sonar:back && npm run sonar:front"
+  },
+  "dependencies": {
+    "@sonar/scan": "^4.3.4"
+  },
+  "devDependencies": {
+    "cross-var": "^1.1.0",
+    "dotenv-cli": "^11.0.0"
+  }
+}

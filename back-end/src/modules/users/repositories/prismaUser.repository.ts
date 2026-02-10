@@ -5,7 +5,7 @@ import { UserEntity } from '../entities/user.entity';
 
 @Injectable()
 export class PrismaUserRepository implements IUserRepository {
-  constructor(private prisma: PrismaService) {}
+  constructor(private readonly prisma: PrismaService) {}
 
   async create(data: {
     name: string;

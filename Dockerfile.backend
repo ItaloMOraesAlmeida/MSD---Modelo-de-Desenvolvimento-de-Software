@@ -6,7 +6,7 @@ FROM node:20-alpine AS builder
 
 WORKDIR /app
 
-COPY back-end/package*.json ./
+COPY back-end/package.json package-lock.json ./
 COPY back-end/tsconfig*.json ./
 COPY back-end/nest-cli.json ./
 

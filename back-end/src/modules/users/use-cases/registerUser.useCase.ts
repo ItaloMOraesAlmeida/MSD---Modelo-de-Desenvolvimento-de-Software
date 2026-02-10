@@ -14,7 +14,7 @@ import { PostResponseDto } from '../../../shared/dtos/response.dto';
 export class RegisterUserUseCase {
   constructor(
     @Inject('IUserRepository')
-    private userRepository: PrismaUserRepository,
+    private readonly userRepository: PrismaUserRepository,
   ) {}
 
   async execute(data: CreateUserDto): Promise<PostResponseDto> {

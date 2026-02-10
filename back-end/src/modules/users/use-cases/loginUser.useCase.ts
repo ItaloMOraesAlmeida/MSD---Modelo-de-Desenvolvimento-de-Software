@@ -15,8 +15,8 @@ import { BaseResponseDto } from '../../../shared/dtos/response.dto';
 export class LoginUserUseCase {
   constructor(
     @Inject('IUserRepository')
-    private userRepository: PrismaUserRepository,
-    private jwtService: JwtService,
+    private readonly userRepository: PrismaUserRepository,
+    private readonly jwtService: JwtService,
   ) {}
 
   async execute(
